@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-ng-app="customersApp">
+<head>
+  <title>User Information</title>
+  <link href="Content/bootstrap.min.css" rel="stylesheet" />
+  <link href="Content/bootstrap-responsive.min.css" rel="stylesheet" />
+  <link href="Content/customerManagementStyles.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand " href="#/">
+        <img src="Content/Images/people.png" alt="logo"> User Information
+      </a>
+      <ul class="nav nav-pills" data-ng-controller="NavbarController">
+        <li data-ng-class="{'active':getClass('/customers')}"><a href="#/customers">Sign Up</a></li>
+        <li data-ng-class="{'active':getClass('/orders')}"><a href="#/orders">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Note that AngularJS 1.2+ now has a built-in ng-animation direction. Left in animated-view to show a
+     custom directive -->
+<div animated-view></div>
+<script src="//www.parsecdn.com/js/parse-1.3.2.min.js"></script>
+<script>
+  Parse.initialize("2zwNlppcC6WqiK09ZOGMgjmOn46b1WLNGand4d1T", "go6sHgUqipHA6S0UMDpCg47reue92gUAPrseP8Mc");
+</script>
+
+
+<!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-route.js"></script>
+<script src="Scripts/jquery.min.js"></script>
+
+<!-- UI Libs -->
+<script src="Scripts/bootstrap.js"></script>
+
+
+<!-- App libs -->
+<script src="app/app.js"></script>
+<script src="app/controllers/controllers.js"></script>
+<script src="app/services/customersService.js"></script>
+<script src="app/directives/animatedView.js"></script>
+</body>
+</html>

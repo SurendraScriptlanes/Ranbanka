@@ -1,0 +1,36 @@
+<div class="orders view">
+    <div class="container">
+        <header>
+            <h3>Login </h3>
+        </header>
+        <div>
+            <div class="span3">
+                User Name:
+                <br />
+                <input data-ng-model="userName" type="text" placeholder="User Name">
+            </div>
+            <div class="span3">
+                Password:
+                <br />
+                <input data-ng-model="password" type="text" placeholder="Password">
+
+                <button id="submitUser" class="btn btn-primary" type="button"
+                        data-ng-disabled="!username || !password"
+                        ng-click="authUser()"> Submit </button>
+                <h1>{{ValidateMessage}}</h1>
+
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <div class="row cardContainer">
+            <div class="span3 card" data-ng-repeat="customer in customers | orderBy:'lastName'">
+                <div class="cardHeader">{{customer.firstName + ' ' + customer.lastName}}</div>
+                <div class="cardBody">{{customer.city}}</div>
+            </div>
+
+
+        </div>
+    </div>

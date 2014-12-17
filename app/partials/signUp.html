@@ -1,0 +1,49 @@
+<div class="customers view">
+    <div class="container">
+        <header>
+            <h3>New User Registration </h3>
+            <br/>
+
+            <h3>Welcom  {{firstName | uppercase}}! </h3>
+        </header>
+        <div class="row">
+            <div class="span3">
+                First Name:
+                <br />
+                <input data-ng-model="firstName" type="text" placeholder="First Name">
+            </div>
+            <div class="span3">
+                Last Name:
+                <br />
+                <input data-ng-model="lastName" type="text" placeholder="Last Name">
+            </div>
+            <div class="span6">
+                City:
+                <br />
+                <input data-ng-model="city" type="text" placeholder="User City">
+            </div>
+            <div>
+                <div class="span3">
+                    User Name:
+                    <br />
+                    <input data-ng-model="userName" type="text" placeholder="User Name">
+                </div>
+                <div class="span3">
+                    Password:
+                    <br />
+                    <input data-ng-model="password" type="password" placeholder="Password">
+                </div>
+
+                <div class="span3">
+                    Confirm Password:
+                    <br />
+                    <input data-ng-model="confirmPassword" type="password" placeholder="Password">
+
+                    <button id="submitUser" class="btn btn-primary" type="button"
+                            data-ng-disabled="!firstName || !lastName || !city || !userName || !password"
+                            data-ng-click="insertUser()">Submit</button>
+                </div>
+            </div>
+            <br /><br />
+            <div>
+                 
